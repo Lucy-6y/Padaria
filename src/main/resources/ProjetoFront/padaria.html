@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Delícia Caseira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <div class="logo">🥖 Delícia Caseira</div>
+    <div class="carrinho" id="iconeCarrinho">
+        🛒 <span id="contadorCarrinho">0</span>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="banner-texto">
+        <h1>O sabor da padaria artesanal</h1>
+        <p>Pães, bolos e doces feitos com carinho todos os dias.</p>
+        <a href="#produtos" class="botao-banner">Ver produtos</a>
+    </div>
+</section>
+
+<section id="produtos" class="produtos-section">
+    <h2>Nossos Produtos</h2>
+
+    <div class="produtos-grid">
+        <div class="produto-card" data-nome="Pão Francês" data-preco="1.50">
+            <img src="imagens/PaoFrances.jpg" alt="Pão Francês">
+            <h3>Pão Francês</h3>
+            <p>Crocante por fora, macio por dentro.</p>
+            <span class="preco">R$ 1,50</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+
+        <div class="produto-card" data-nome="Pão de Queijo" data-preco="3.00">
+            <img src="imagens/PaoDeQueijo.webp" alt="Pão de Queijo">
+            <h3>Pão de Queijo</h3>
+            <p>Tradicional e irresistível!</p>
+            <span class="preco">R$ 3,00</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+
+        <div class="produto-card" data-nome="Bolo de Chocolate" data-preco="15.00">
+            <img src="imagens/BoloDeChocolate.avif" alt="Bolo de Chocolate">
+            <h3>Bolo de Chocolate</h3>
+            <p>Feito com o melhor cacau.</p>
+            <span class="preco">R$ 15,00</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+
+        <div class="produto-card" data-nome="Churros" data-preco="6.00">
+            <img src="imagens/Churros.jpg" alt="Churros">
+            <h3>Churros</h3>
+            <p>Recheados e polvilhados com açúcar e canela.</p>
+            <span class="preco">R$ 6,00</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+
+        <div class="produto-card" data-nome="Sonho" data-preco="5.00">
+            <img src="imagens/Sonho.webp" alt="Sonho">
+            <h3>Sonho</h3>
+            <p>Macio, leve e doce na medida certa.</p>
+            <span class="preco">R$ 5,00</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+
+        <div class="produto-card" data-nome="Suco Natural" data-preco="4.50">
+            <img src="imagens/SucoNatural.webp" alt="Suco Natural">
+            <h3>Sucos Naturais</h3>
+            <p>Refrescantes e 100% naturais.</p>
+            <span class="preco">R$ 4,50</span>
+            <button class="btn-carrinho">Adicionar</button>
+        </div>
+    </div>
+</section>
+
+<!-- Carrinho de compras (popup) -->
+<div id="carrinhoPopup" class="carrinho-popup">
+    <h3>🛍️ Seu Carrinho</h3>
+    <ul id="listaCarrinho"></ul>
+    <p class="total">Total: <span id="totalCarrinho">R$ 0,00</span></p>
+    <button id="fecharCarrinho">Fechar</button>
+</div>
+
+<footer>
+    <p>📍 Rua das Flores, 123 - Centro, Cidade Feliz</p>
+    <p>📞 (11) 99999-9999 | ✉️ contato@deliciacaseira.com</p>
+    <p>© 2025 Padaria Delícia Caseira - Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
