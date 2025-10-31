@@ -408,3 +408,75 @@ footer {
 .btn-carrinho:hover {
     background-color: #4b3b2b;
 }
+/* ======= PAGAMENTO NO CARRINHO ======= */
+.pagamento {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.pagamento label {
+    display: block;
+    font-weight: 600;
+    color: #4b3b2b;
+    margin-bottom: 8px;
+}
+
+.pagamento select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d6c9b3;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #4b3b2b;
+    background-color: #fffdf8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagamento select:focus {
+    border-color: #6b4c27;
+    box-shadow: 0 0 8px rgba(107, 76, 39, 0.4);
+    outline: none;
+}
+/* ======= DETALHES DO PAGAMENTO ======= */
+#detalhesPagamento {
+    margin-top: 15px;
+}
+
+#detalhesPagamento label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #4b3b2b;
+}
+
+#detalhesPagamento input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d6c9b3;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #4b3b2b;
+}
+
+#detalhesPagamento input:focus {
+    border-color: #6b4c27;
+    outline: none;
+    box-shadow: 0 0 8px rgba(107, 76, 39, 0.4);
+}
+
+.qrcode-pix {
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #d6c9b3;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#troco {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #6b4c27;
+    text-align: center;
+}
