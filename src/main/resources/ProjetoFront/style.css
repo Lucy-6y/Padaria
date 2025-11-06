@@ -480,3 +480,19 @@ footer {
     color: #6b4c27;
     text-align: center;
 }
+#finalizarPagamento {
+    background-color: #f3d9a3;
+    color: #4b3b2b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#finalizarPagamento:hover {
+    background-color: #ffe6b5;
+}

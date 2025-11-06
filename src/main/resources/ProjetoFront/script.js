@@ -101,10 +101,13 @@ iconeCarrinho.addEventListener("click", () => {
 });
 
 fecharCarrinho.addEventListener("click", () => {
+    const finalizarPagamento = document.getElementById("finalizarPagamento");
+
     popup.classList.remove("ativo");
     const formaPagamento = document.getElementById("formaPagamento").value;
     alert(`Forma de pagamento selecionada: ${formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1)}`);
     popup.classList.remove("ativo");
+
 });
 
 function atualizarCarrinho() {
@@ -121,3 +124,38 @@ function atualizarCarrinho() {
 
     totalCarrinho.textContent = "R$ " + total.toFixed(2).replace(".", ",");
 }
+// ====== FINALIZAR PAGAMENTO ======
+finalizarPagamento.addEventListener("click", () => {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio! 🛒");
+        return;
+    }
+
+    const forma = formaPagamentoSelect.value;
+
+    if (!forma) {
+        alert("Por favor, selecione uma forma de pagamento antes de finalizar. 💳");
+        return;
+    }
+
+    let mensagem = "";
+
+    if (forma === "pix") {
+        mensagem = "Pagamento via Pix detectado. Aguarde a confirmação do QR Code. ✅";
+    } else if (forma === "credito" || forma === "debito") {
+        mensagem = "Pagamento com cartão processado com sucesso. 💳";
+    } else if (forma === "dinheiro") {
+        mensagem = "Pagamento em dinheiro confirmado. 💵";
+    }
+
+    const total = totalCarrinho.textContent;
+
+    alert(`Compra finalizada com sucesso! 🎉\n\nForma de pagamento: ${forma.toUpperCase()}\nTotal: ${total}\n\n${mensagem}`);
+
+    // Limpa o carrinho após finalizar
+    carrinho = [];
+    atualizarCarrinho();
+    detalhesPagamento.innerHTML = "";
+    formaPagamentoSelect.value = "";
+    popup.classList.remove("ativo");
+});
