@@ -3,7 +3,6 @@ package com.javaluciana.web.cadastro_usuario.business;
 import com.javaluciana.web.cadastro_usuario.infrastructure.entitys.Padaria;
 import com.javaluciana.web.cadastro_usuario.infrastructure.repository.PadariaRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
@@ -16,7 +15,7 @@ public class PadariaService {
         padariaRepository.save(padaria);
     }
 
-    public Padaria buscarPorId(Long id) {
+    public Padaria buscarPorId(String id) {
         return padariaRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Item de padaria nao encotrado com Id: " + id));
     }

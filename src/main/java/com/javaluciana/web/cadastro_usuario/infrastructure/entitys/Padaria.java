@@ -1,27 +1,27 @@
 package com.javaluciana.web.cadastro_usuario.infrastructure.entitys;
 
-import jakarta.persistence.*;
+
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@Table(name = "tb_padaria")
+@Document(collation = "padaria")
 public class Padaria {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nome")
+
     private String nome;
 
-    @Column(name = "preco")
+
     private Double preco;
 
-    @Column(name = "quantidade")
+
     private Integer quantidade;
 }

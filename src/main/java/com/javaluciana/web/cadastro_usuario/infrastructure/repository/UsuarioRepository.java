@@ -1,11 +1,12 @@
 package com.javaluciana.web.cadastro_usuario.infrastructure.repository;
 
 import com.javaluciana.web.cadastro_usuario.infrastructure.entitys.Usuario;
-import jakarta.transaction.Transactional;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+
 import java.util.Optional;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+public interface UsuarioRepository extends MongoRepository<Usuario, Integer> {
 
   Optional<Usuario> findByCpf(String cpf);
 
